@@ -1,0 +1,207 @@
+.main-div{
+    display: flex;
+    padding: 5px 0px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+    font-family: monospace;
+    .logo{
+        img{
+            width: 50px;
+            border-radius: 20px;
+        }
+    }
+    .listings {
+        ul {
+          margin: 0px;
+          padding: 0px;
+      
+          li {
+            display: inline;
+            margin: 15px;
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            cursor: pointer;
+            position: relative; // Needed for the pseudo-element positioning
+      
+            a {
+              text-decoration: none;
+              color: inherit;
+              position: relative;
+      
+              &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #5E3BEE; // Color for underline animation
+                position: absolute;
+                bottom: -5px; // Adjust the distance between text and the underline
+                left: 0;
+                transform: scaleX(0); // Start with no underline (hidden)
+                transform-origin: center;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                opacity: 0; // Initially hidden
+              }
+            }
+      
+            &:hover {
+              color: #5E3BEE;
+      
+              a::after {
+                opacity: 1; // Show the underline
+                transform: scaleX(1); // Expand the underline to full width
+              }
+            }
+          }
+        }
+    }  
+    .contact{
+        a{
+            padding: 8px 10px;
+            background: transparent;
+            border: 2px solid #5E3BEE;
+            border-radius: 5px;
+            color: #5E3BEE;
+            text-decoration: none;
+        }
+    }
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    // padding-left: 15px;
+    margin-bottom: 50px;
+    background-color: #F5FCFF;
+    padding: 20px 40px ;
+    .content{
+
+        // width: 50%;
+        h5{
+            font-size: 20px;
+            margin-bottom: 0px;
+        }
+        h1{
+            font-size: 60px;
+            span{
+                color: #5E3BEE;
+            }
+        }
+        p{
+            margin-bottom: 15px;
+        }
+        .getintouch{
+            a{
+                text-decoration: none;
+                background-color: #5E3BEE;
+                color: white;
+                padding: 8px 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+    .profile-box{
+        // width: 50%;
+        img{
+            width: 100%;
+        }
+        // img {
+        //     transition: transform .5s;
+        //   }
+        // img:hover {
+        //     transform: scale(1.1);
+        //   }
+    }
+}
+.expertise-box{
+    margin-bottom: 50px;
+    padding: 0px 40px;
+    .title{
+        margin-bottom: 20px;
+        h5{
+            font-size: 20px;
+        }
+        h1{
+            font-size: 50px;
+        }
+    }
+    .wrapper{
+        .content-wrapper{
+            background-color: #F5FCFF;
+            padding: 20px;
+            border: 1px solid #0000ff3d;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+           &:hover{
+            border-bottom: 5px solid #0000ff3d;
+           }
+            .logo{
+                margin-bottom: 10px;
+                img{
+                    width: 50px;
+                }
+            }
+            .info{
+                h3{
+
+                }
+                p{
+
+                }
+            }
+        }
+    }
+}
+.about-me{
+    .about-main-content{
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        padding: 50px 40px ;
+        .content{
+            h1{
+                font-size: 50px;
+                margin-bottom: 0px;
+                &:hover{
+                    color: #5E3BEE;
+                }
+            }
+            p{
+                margin-bottom: 15px;
+            }
+            .getintouch{
+                a{
+                    text-decoration: none;
+                    background-color: #5E3BEE;
+                    color: white;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .profile-box{
+            margin-right: 40px;
+            img{
+                width: 100%;
+            }
+            img {
+                transition: transform .5s;
+              }
+            img:hover {
+                transform: scale(1.1);
+              }
+        }
+    }
+}
+.projects{
+    margin-bottom: 50px;
+    .card{
+
+    }
+    .card-body{
+
+    }
+}
